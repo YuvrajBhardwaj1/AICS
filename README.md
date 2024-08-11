@@ -1,131 +1,103 @@
-\`\`\`
+# Headstarter AI ChatSupport
 
-\# Headstarter AI ChatSupport
+## Overview
 
-Headstarter AI ChatSupport is an AI-powered chat support application designed to assist users with their queries. The application integrates with various authentication providers and offers a responsive chat interface.
+Headstarter AI ChatSupport is an interactive chat application powered by Next.js and various authentication providers. It allows users to communicate with an AI assistant and provides authentication via GitHub and Google.
 
-\## Features
+## Features
 
-\- AI-powered chat support
+- Real-time chat with an AI assistant
+- Authentication with GitHub and Google
+- Feedback system for messages
+- Responsive design
 
-\- Integration with GitHub and Google for authentication
+## Technologies
 
-\- Responsive design for both desktop and mobile devices
+- **Next.js** - React framework for server-side rendering
+- **NextAuth.js** - Authentication for Next.js
+- **Material-UI** - Component library for React
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vercel** - Deployment platform
+- **OpenRouter API** - For AI interactions
 
-\- Feedback system for user interactions
+## Contributors
 
-\## Technologies
+- [Aryan Bhardwaj](https://github.com/AryanBhardwaj789) - Project Lead
 
-\- \*\*Next.js\*\* - React framework for server-side rendering
+## Live Demo
 
-\- \*\*NextAuth.js\*\* - Authentication for Next.js
+You can check out the live demo of the application [here](https://headstarter-chatsupport.vercel.app/).
 
-\- \*\*Material-UI\*\* - Component library for React
+## Getting Started
 
-\- \*\*Tailwind CSS\*\* - Utility-first CSS framework
+To get a local copy up and running follow these simple steps.
 
-\- \*\*Vercel\*\* - Deployment platform
+### Installation
 
-\- \*\*OpenRouter API\*\* - For AI interactions
+1. Clone the repository:
 
-\## Installation
+    ```bash
+    git clone https://github.com/YuvrajBhardwaj1/AICS.git
+    ```
 
-To get started with the project locally, follow these steps:
+2. Navigate to the project directory:
 
-1\. \*\*Clone the repository:\*\*
+    ```bash
+    cd AICS
+    ```
 
-\`\`\`bash
+3. Install the required packages:
 
-git clone https://github.com/yuvrajbhardwaj/headstarter-chatsupport.git
+    ```bash
+    npm install
+    ```
 
-\`\`\`
+4. Create a `.env.local` file in the root directory of the project and add the following environment variables:
 
-1\. Navigate to the project directory:
+    ```env
+    NEXTAUTH_SECRET=your_secret_here
+    NEXTAUTH_URL=http://localhost:3000
+    GITHUB_ID=your_github_client_id
+    GITHUB_SECRET=your_github_client_secret
+    GOOGLE_ID=your_google_client_id
+    GOOGLE_SECRET=your_google_client_secret
+    ```
 
-\`\`\`
+5. Run the development server:
 
-cd headstarter-chatsupport
+    ```bash
+    npm run dev
+    ```
 
-\`\`\`
+6. Open your browser and visit `http://localhost:3000` to view the application.
 
-2\. Install the dependencies:
+## Configuration
 
-\`\`\`
+Ensure you have configured the following OAuth providers:
 
-npm install
+## Deployment
 
-\`\`\`
+To deploy the application to Vercel:
 
-Configuration
+1. Push your code to a GitHub repository.
+2. Go to [Vercel](https://vercel.com) and sign in with your GitHub account.
+3. Import your GitHub repository.
+4. Set up environment variables in the Vercel dashboard:
+   - `NEXTAUTH_SECRET`
+   - `NEXTAUTH_URL`
+   - `GITHUB_ID`
+   - `GITHUB_SECRET`
+   - `GOOGLE_ID`
+   - `GOOGLE_SECRET`
+5. Click "Deploy" and follow the instructions.
 
-\-------------
+## License
 
-Set up environment variables:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Create a \`.env.local\` file in the root of the project and add the following variables:
+## Acknowledgements
 
-\`\`\`
+- Next.js for the React framework.
+- Vercel for deployment.
+- GitHub and Google for OAuth authentication.
 
-NEXTAUTH\_SECRET=your\_nextauth\_secret
-
-NEXTAUTH\_URL=http://localhost:3000
-
-OPENROUTER\_API\_KEY=your\_openrouter\_api\_key
-
-GITHUB\_ID=your\_github\_client\_id
-
-GITHUB\_SECRET=your\_github\_client\_secret
-
-GOOGLE\_ID=your\_google\_client\_id
-
-GOOGLE\_SECRET=your\_google\_client\_secret
-
-\`\`\`
-
-Replace \`your\_nextauth\_secret\`, \`your\_openrouter\_api\_key\`, \`your\_github\_client\_id\`, \`your\_github\_client\_secret\`, \`your\_google\_client\_id\`, and \`your\_google\_client\_secret\` with your actual credentials.
-
-Update OAuth Redirect URIs:
-
-For Google and GitHub authentication, update the redirect URIs in your OAuth provider's console to:
-
-\- Authorized JavaScript Origins: \`http://localhost:3000\` (for local development) and \`https://headstarter-chatsupport.vercel.app\` (for production)
-
-\- Authorized Redirect URIs: \`http://localhost:3000/api/auth/callback/google\` and \`https://headstarter-chatsupport.vercel.app/api/auth/callback/google\` (for Google), and similarly for GitHub.
-
-Usage
-
-\-----
-
-Start the development server:
-
-\`\`\`
-
-npm run dev
-
-\`\`\`
-
-Open your browser and navigate to:
-
-\`\`\`
-
-http://localhost:3000
-
-\`\`\`
-
-Deployment
-
-\----------
-
-To deploy your project to Vercel, follow these steps:
-
-1\. Push your code to a GitHub repository.
-
-2\. Go to Vercel and create a new project.
-
-3\. Connect your GitHub repository to Vercel.
-
-4\. Configure the environment variables in the Vercel dashboard.
-
-5\. Deploy the project.
-
-Vercel: The project is deployed at \`https://headstarter-chatsupport.vercel.app/\`.
