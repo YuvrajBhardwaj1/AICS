@@ -13,6 +13,7 @@ const handler = NextAuth({
         clientSecret: process.env.GOOGLE_SECRET
       }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async redirect({ url, baseUrl }) {
       // Redirect to the main page after login
